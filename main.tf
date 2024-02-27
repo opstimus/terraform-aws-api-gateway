@@ -16,7 +16,7 @@ resource "aws_apigatewayv2_stage" "main" {
   auto_deploy = true
 }
 
-resource "aws_apigatewayv2_deployment" "example" {
+resource "aws_apigatewayv2_deployment" "main" {
   api_id = aws_apigatewayv2_api.main.id
   lifecycle {
     create_before_destroy = true
