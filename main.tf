@@ -16,6 +16,13 @@ resource "aws_apigatewayv2_stage" "main" {
   auto_deploy = true
 }
 
+resource "aws_apigatewayv2_deployment" "example" {
+  api_id = aws_apigatewayv2_api.main.id
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
 resource "aws_apigatewayv2_domain_name" "main" {
   count       = var.domain_name != null ? 1 : 0
   domain_name = var.domain_name
