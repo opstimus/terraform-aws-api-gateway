@@ -12,3 +12,8 @@ variable "name" {
   type        = string
   description = "API name"
 }
+
+variable "cors_allow_origins" {
+  type    = list(string)
+  default = ["*"]
+}
