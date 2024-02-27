@@ -18,6 +18,11 @@ variable "cors_allow_origins" {
   default = ["*"]
 }
 
+variable "api_version" {
+  type    = string
+  default = "1.0"
+}
+
 variable "body" {
   type    = string
   default = null
