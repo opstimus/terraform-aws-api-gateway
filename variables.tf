@@ -17,3 +17,8 @@ variable "cors_allow_origins" {
   type    = list(string)
   default = ["*"]
 }
+
+variable "body" {
+  type    = string
+  default = null
+}
