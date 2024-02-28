@@ -14,12 +14,16 @@ variable "name" {
 }
 
 variable "cors_allow_origins" {
-  type    = list(string)
-  default = ["*"]
+  type = list(string)
 }
 
 variable "cors_allow_methods" {
   type    = list(string)
+  default = ["*"]
+}
+
+variable "cors_allow_headers" {
+  type    = list(any)
   default = ["*"]
 }
 

@@ -6,6 +6,7 @@ resource "aws_apigatewayv2_api" "main" {
   cors_configuration {
     allow_origins = var.cors_allow_origins
     allow_methods = var.cors_allow_methods
+    allow_headers = var.cors_allow_headers
   }
 
   body = var.body != null ? var.body : null
