@@ -18,6 +18,11 @@ variable "cors_allow_origins" {
   default = ["*"]
 }
 
+variable "cors_allow_methods" {
+  type    = list(string)
+  default = ["*"]
+}
+
 variable "api_version" {
   type    = string
   default = "1.0"
