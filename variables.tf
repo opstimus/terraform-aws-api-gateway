@@ -27,6 +27,11 @@ variable "cors_allow_headers" {
   default = ["*"]
 }
 
+variable "cors_max_age" {
+  type    = number
+  default = 5
+}
+
 variable "api_version" {
   type    = string
   default = "1.0"

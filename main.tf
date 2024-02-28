@@ -7,6 +7,7 @@ resource "aws_apigatewayv2_api" "main" {
     allow_origins = var.cors_allow_origins
     allow_methods = var.cors_allow_methods
     allow_headers = var.cors_allow_headers
+    max_age       = var.cors_max_age
   }
 
   body = var.body != null ? var.body : null
