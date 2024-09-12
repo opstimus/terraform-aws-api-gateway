@@ -45,15 +45,15 @@ This Terraform module creates an AWS API Gateway v2 resource with CORS configura
 
 ```hcl
 module "api_gateway" {
-  source  = "path_to_your_module"
+  source              = "github.com/opstimus/terraform-aws-api-gateway?ref=v<RELEASE>"
 
-  project           = "example-project"
-  environment       = "dev"
-  name              = "example-api"
-  cors_allow_origins = ["*"]
+  project             = "example-project"
+  environment         = "dev"
+  name                = "example-api"
+  cors_allow_origins  = ["*"]
 
   # Optional configurations
-  api_version       = "1.0"
-  domain_name       = "api.example.com"
-  certificate_arn   = "arn:aws:acm:region:account-id:certificate/certificate-id"
+  api_version         = "1.0"
+  domain_name         = "api.example.com"
+  certificate_arn     = "arn:aws:acm:region:account-id:certificate/certificate-id"
 }
