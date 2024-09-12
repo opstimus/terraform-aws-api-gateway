@@ -57,3 +57,4 @@ module "api_gateway" {
   domain_name         = "api.example.com"
   certificate_arn     = "arn:aws:acm:region:account-id:certificate/certificate-id"
 }
+```
